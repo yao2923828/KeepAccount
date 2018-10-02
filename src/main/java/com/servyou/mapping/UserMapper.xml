@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.servyou.dao.IUserDao">
+	<select id="queryUser" resultType="com.servyou.vo.User">
+		select * from tb_user
+	</select>
+	<select id="queryUserById" resultType="int">
+		select * from tb_user where userid=#{id}
+	</select>
+	<update id="updateUser" parameterType="com.servyou.vo.User">
+		update tb_user set username = #{userName},password = #{password},phone = #{phone},sex = #{sex} where userid = #{userid}
+	</update>
+	<delete id="deleteUser" parameterType="int">
+		delete from tb_user where userid = #{id}
+	</delete>
+	<insert id="addUser" parameterType="com.servyou.vo.User">
+		insert into tb_user (username,password,phone,sex)
+		values (#{userName},#{password},#{phone},#{sex})
+	</insert>
+</mapper>
