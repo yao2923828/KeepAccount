@@ -2,6 +2,7 @@ package com.servyou.controller;
 
 import com.servyou.vo.ResultDto;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -17,47 +18,47 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("/bill")
 public class BillController {
 
-    @RequestMapping("/addBill")
-    public ResultDto addBill() {
+    @RequestMapping(value = "/addBill",method =RequestMethod.POST)
+    public ResultDto addBill(@P) {
         return ResultDto.createSuccess();
     }
-    @RequestMapping("/deleteBill")
+    @RequestMapping(value="/deleteBill",method =RequestMethod.POST)
     public ResultDto deleteBill() {
         return ResultDto.createSuccess();
     }
-    @RequestMapping("/editBill")
+    @RequestMapping(value="/editBill")
     public ResultDto editBill() {
         return ResultDto.createSuccess();
     }
-    @RequestMapping("/queryDailyBills")
+    @RequestMapping(value="/queryDailyBills")
     public ResultDto queryDailyBills() {
         return ResultDto.createSuccess();
     }
-    @RequestMapping("/queryMonthBill")
+    @RequestMapping(value="/queryMonthBill")
     public ResultDto queryMonthBill() {
         return ResultDto.createSuccess();
     }
-    @RequestMapping("/queryLastSevenDaysBills")
+    @RequestMapping(value="/queryLastSevenDaysBills")
     public ResultDto queryLastSevenDaysBills() {
         return ResultDto.createSuccess();
     }
-    @RequestMapping("/setCalDate")
+    @RequestMapping(value="/setCalDate")
     public ResultDto setCalDate() {
         return ResultDto.createSuccess();
     }
-    @RequestMapping("/addBillTemplat")
+    @RequestMapping(value="/addBillTemplat")
     public ResultDto addBillTemplat() {
         return ResultDto.createSuccess();
     }
-    @RequestMapping("/deleteBillTemplat")
+    @RequestMapping(value="/deleteBillTemplat")
     public ResultDto deleteBillTemplat() {
         return ResultDto.createSuccess();
     }
-    @RequestMapping("/editBillTemplat")
+    @RequestMapping(value="/editBillTemplat")
     public ResultDto editBillTemplat() {
         return ResultDto.createSuccess();
     }
-    @RequestMapping("/queryBillTemplat")
+    @RequestMapping(value="/queryBillTemplat")
     public ResultDto queryBillTemplat() {
         return ResultDto.createSuccess();
     }
