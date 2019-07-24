@@ -1,25 +1,18 @@
-package com.servyou.controller;
+package com.controller;
 
-import com.servyou.vo.ResultDto;
+import com.vo.BillBean;
+import com.vo.ResultDto;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * <p>标题: </p>
- * <p>功能描述: </p>
- *
- * <p>版权: 税友软件集团股份有限公司</p> 
- * <p>创建时间: 2018/10/2 21:34</p> 
- * <p>作者：yaoq</p>
- * <p>修改历史记录：</p>
- * ====================================================================<br>
- */
+
 @RestController("/bill")
 public class BillController {
 
     @RequestMapping(value = "/addBill",method =RequestMethod.POST)
-    public ResultDto addBill(@P) {
+    public ResultDto addBill(@RequestBody BillBean Bill) {
         return ResultDto.createSuccess();
     }
     @RequestMapping(value="/deleteBill",method =RequestMethod.POST)

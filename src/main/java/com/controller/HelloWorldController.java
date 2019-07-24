@@ -1,7 +1,4 @@
-package com.servyou.controller;
-
-import java.util.HashMap;
-import java.util.Map;
+package com.controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -13,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 
-import com.servyou.business.IUserBusiness;
-import com.servyou.vo.User;
+import com.business.IUserBusiness;
+import com.vo.User;
 @Controller
 public class HelloWorldController{
 	@Resource
